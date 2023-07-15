@@ -1,7 +1,21 @@
-<div class="mx-auto md:w-2/3 w-full">
-  <h1 class="font-bold text-4xl">New expense</h1>
+<div class="container d-flex flex-column justify-content-between vh-100 bg-light px-0 mx-auto">
+  <%= form_with url: group_expenses_path, locale: true, method: :post  do |f| %>
+  <div class="flex justify-between items-center bg-blue-600 py-4 px-2">
+    <%= link_to group_expenses_path do %>
+    <span class="text-white" style="font-size:24px;">&#10229;</span>
+    <% end %>
+    <span class="uppercase text-white">New Transaction</span>
+    <%= f.submit "Save", class: "text-white p-1 font-semibold cursor-pointer" %>
+  </div>
+  <fieldset class="flex flex-col gap-2 mt-4">
+    <%= f.text_field :name, placeholder: "Name", required: true, class: "block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" %>
+    
+    <%= f.number_field :amount, placeholder: "Amount", required: true, class: "block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40" %>
 
-  <%= render "form", expense: @expense %>
-
-  <%= link_to 'Back to expenses', expenses_path, class: "ml-2 rounded-lg py-3 px-5 bg-gray-100 inline-block font-medium" %>
+      <%= f.label :Category %>
+      <%= f.select :group, current_user.groups.map { |category| [category.name, category.id] }, required: true, class: "block w-full py-3 text-gray-700 bg-white border rounded-lg px-11 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"%>
+    </div>
+    <%= f.hidden_field :author_id, value: current_user.id %>
+  </fieldset>
+  <% end %>
 </div>
