@@ -1,17 +1,16 @@
+
 # 📗 Table of Contents
 
 - [📖 About the Project](#about-project)
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
   - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
   - [Install](#install)
   - [Usage](#usage)
   - [Run tests](#run-tests)
-  - [Deployment](#deployment)
 - [👥 Authors](#authors)
 - [🔭 Future Features](#future-features)
 - [🤝 Contributing](#contributing)
@@ -20,31 +19,18 @@
 - [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
+# 📖 Budget App <a name="about-project"></a>
 
-# 📖 [your_project_name] <a name="about-project"></a>
-
-> Describe your project in 1 or 2 sentences.
-
-**[your_project__name]** is a...
+**Budget App** is a mobile web application that allows users to track their expenses. The application is built on Ruby on Rails and uses Postgres as its database.
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
-
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://reactjs.org/">React.js</a></li>
-  </ul>
-</details>
-
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://expressjs.com/">Ruby</a></li>
   </ul>
 </details>
 
@@ -59,105 +45,88 @@
 
 ### Key Features <a name="key-features"></a>
 
-> Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- Transactions: Users can create transactions, which are associated with a category. The category can be anything, such as "Food," "Entertainment," or "Transportation."
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+- Categories: Users can create and manage categories. This allows them to track their expenses more granularly.
 
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-> Add a link to your deployed project.
-
-- [Live Demo Link](https://google.com)
+- Reports: Users can generate reports that show their spending habits. This can help them to identify areas where they can save money.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
-
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
+📘 📗 📕 📙
 
-In order to run this project you need:
+Before installing this application, you need to have the following software installed on your machine:
 
-<!--
-Example command:
+- Ruby 2.6.3 or higher
+- Rails 6.0.0 or higher
+- PostgreSQL
 
-```sh
- gem install rails
-```
- -->
-
-### Setup
-
-Clone this repository to your desired folder:
-
-<!--
-Example commands:
-
-```sh
-  cd my-folder
-  git clone git@github.com:myaccount/my-project.git
-```
---->
 
 ### Install
 
-Install this project with:
+To install this application, follow these steps:
 
-<!--
-Example command:
+1. Clone this repository to your local machine using the command
 
 ```sh
-  cd my-project
-  gem install
+git clone git@github.com:Ridwanullahi-code/BudgetApp.git
+  
 ```
---->
+OR
+
+```sh
+git clone https://github.com/Ridwanullahi-code/BudgetApp.git
+  
+```
+2.  Navigate to the root directory of the application using the command 
+
+```sh
+cd BudgetApp
+```
+3.  Install the required gems by running the command 
+
+```sh
+ bundle install
+```
+4.  Create the database by running the command 
+
+```sh
+ rails db:create
+```
+
+5.  Migrate the database by running the command 
+
+```sh
+ rails db:migrate
+```
 
 ### Usage
 
-To run the project, execute the following command:
+To use this application, follow these steps:
 
-<!--
-Example command:
-
+1. Start the server by running the command 
 ```sh
-  rails server
+  rails server 
 ```
---->
+2. Open your web browser and navigate to
+```sh
+  http://localhost:3000
+```
 
 ### Run tests
 
 To run tests, run the following command:
 
-<!--
+
 Example command:
 
 ```sh
-  bin/rails test test/models/article_test.rb
+  rspec ./spec
 ```
---->
-
-### Deployment
-
-You can deploy this project using:
-
-<!--
-Example:
-
-```sh
-
-```
- -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,19 +134,16 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+## **Author**
 
-👤 **Author1**
+- Github: [Ridwan](https://github.com/Ridwanullahi-code)
+- LinkedIn: [Ridwan](https://www.linkedin.com/in/ajayi-ridwan/)
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+## 🚀 **About Me**
 
-👤 **Author2**
+I'm full stack software developer, Computer science, and Microverse student.
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+**Stack:** Python, JavaScript, Bootstrap, Ruby, Rails, React, Redux. Available for hire!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -185,11 +151,12 @@ Example:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Describe 1 - 3 features you will add to the project.
+- Budget goals: Users would be able to set budget goals for different categories, such as food, transportation, and 
+entertainment. The app would then track their spending and show them how close they are to reaching their goals.
 
-- [ ] **[new_feature_1]**
-- [ ] **[new_feature_2]**
-- [ ] **[new_feature_3]**
+- Savings tracker: The app would track users' savings progress and show them how much they have saved in each category. This would help users to stay motivated and to reach their savings goals.
+
+- Collaborative budgeting: Users would be able to share their budgets with others. This would allow
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -199,7 +166,7 @@ Example:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Ridwanullahi-code/BudgetApp/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -207,19 +174,18 @@ Feel free to check the [issues page](../../issues/).
 
 ## ⭐️ Show your support <a name="support"></a>
 
-> Write a message to encourage readers to support your project
-
-If you like this project...
+Give a ⭐️ if you like this project!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-> Give credit to everyone who inspired your codebase.
+- I would like to thank [Gregoire Vella on Behance](https://www.behance.net/gregoirevella) for his permission to use his design for this project
 
-I would like to thank...
+- I would also like to thank the creators of the [Creative Commons license](https://creativecommons.org/licenses/by-nc/4.0/) for making it possible for me to share this project with others.
+
+- I would like to thank [Microverse](https://www.microverse.org/) for providing good material and well-detailed project requirements
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -227,15 +193,18 @@ I would like to thank...
 
 ## ❓ FAQ (OPTIONAL) <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **What are the benefits of using the Budget App?**
 
-  - [Answer_1]
+  - The Budget App offers a number of benefits, including:
 
-- **[Question_2]**
+>-  Easy to use: The app is designed to be easy to use, even for people who are not familiar with budgeting software.
+>- Flexible: The app allows users to track their expenses in a way that works for them.
+>-  Insightful: The app provides users with insights into their spending habits, which can help them to save mone
 
-  - [Answer_2]
+- **What are the system requirements for the Budget App?.**
+
+- The Budget App can be run on any device that has a web browser. However, the app is optimized for use on desktop computers and laptops
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -244,7 +213,5 @@ I would like to thank...
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
