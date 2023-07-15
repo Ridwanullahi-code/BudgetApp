@@ -20,16 +20,14 @@ class ExpensesController < ApplicationController
     if @expense.save
       group_expense = GroupExpense.new(group_id: params[:group], expense_id: @expense.id)
       group_expense.save
-      flash[:success] = 'Transaction was successfully.'
-      redirect_to group_expenses_path(params[:group])
+      redirect_to group_expenses_path(params[:group]), notice: 'You completed this transaction successfully'
     else
-      render :new
+      render :new, alert: 'New transaction could not be created.'
     end
   end
 
   private
 
-  # Only allow a list of trusted parameters through.
   def expense_params
     params.require(:expense).permit(:name, :amount, :author_id)
   end
