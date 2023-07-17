@@ -1,0 +1,9 @@
+<div class="flex flex-col justify-between bg-slate-100 h-screen px-6 py-12">
+	<div class="basis-5/6 flex items-center justify-center">
+		<h1 class=" container text-4xl text-center font-bold">Budget App</h1>
+	</div>
+	<div class="basis-1/6 flex flex-col justify-end gap-4">
+		<%= link_to "LOGIN IN", new_user_session_path, class: "bg-blue-600 text-white font-semibold text-center py-3 hover:bg-blue-700 active:bg-blue-900" %>
+		<%= link_to "SIGN UP", new_user_registration_path, class: "bg-transparent font-semibold text-grey-400  border border-blue text-center py-3 hover:bg-blue-600 hover:text-white border" %>
+	</div>
+</div>
