@@ -1,0 +1,18 @@
+databases:
+  - name: postgres
+    databaseName: budgetapp_vi29
+    user: budgetapp_vi29_user
+
+services:
+  - type: web
+    name: ridwan
+    runtime: ruby
+    buildCommand: "./bin/render-build.sh"
+    startCommand: "bundle exec puma -C config/puma.rb"
+    envVars:
+      - key: DATABASE_URL
+        fromDatabase:
+          name: budgetapp_vi29
+          property: connectionString
+      - key: RAILS_MASTER_KEY
+        sync: false
