@@ -59,7 +59,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link](https://cryptovest-app.netlify.app/)
+- [Live Demo Link](https://budget-s2j6.onrender.com/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
